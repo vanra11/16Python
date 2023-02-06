@@ -1,0 +1,10 @@
+str = input ('Enter the word: ')  
+strstr = str.casefold()  
+  
+# This string is reverse.  
+rev = reversed(str)  
+  
+if list(str) == list(rev):  
+   print("The entered value is palindrome")  
+else:  
+   print("The entered value is not Palindrome")  
