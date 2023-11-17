@@ -1,0 +1,25 @@
+print('Calculate Simple and Compound interest as per choice')
+print('Menu')
+print('1: Simple interest')
+print('2: Compound interest')
+lang=int(input('Enter choice: '))
+match lang:
+    case 1:
+        print('Simple Interest')
+        psi=float(input('Enter Principal amount: '))
+        tsi=float(input('Enter time in years: '))
+        rsi=float(input('Enter rate of interest: '))
+        si = (psi * tsi * rsi)/100
+        print('The Simple Interest is', si)
+        
+    case 2:
+        print('Compound Interest')
+        pci=float(input('Enter Principal amount: '))
+        tci=float(input('Enter time in years: '))
+        rci=float(input('Enter rate of interest: '))
+        Amount = pci * (pow((1 + rci / 100), tci))
+        CI = Amount - pci
+        print("Compound interest is", CI)
+        
+    case _:
+        print('Error')
