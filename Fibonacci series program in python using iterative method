@@ -1,0 +1,12 @@
+n = int(input("Input limit: "))
+a=0
+b=1
+print("Fibonacci series: ")
+for i in range(0,n):
+    if i<=1:
+        t=i
+    else:
+      t = a+b;
+      a=b;
+      b=t;
+    print(t)
