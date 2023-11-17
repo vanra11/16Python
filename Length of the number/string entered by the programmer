@@ -1,0 +1,5 @@
+strnum=input('Enter the number/word: ')
+
+my_str = str(strnum)
+
+print(len(my_str))
