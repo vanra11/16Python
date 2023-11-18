@@ -1,0 +1,41 @@
+print('Menu')
+print('1: Celcius to Fahrenheit')
+print('2: Celcius to Kelvin')
+print('3: Fahrenheit to Celcius')
+print('4: Fahrenheit to Kelvin')
+print('5: Kelvin to Celcius')
+print('6: Kelvin to Fahrenheit')
+lang=int(input('Enter choice: '))
+match lang:
+    case 1:
+        print('Celcius to Fahrenheit')
+        ccf=float(input('Enter temperature in Celcius: '))
+        fcf = (ccf * 1.8) + 32
+        print("Temperature in Fahrenheit: ", fcf)
+    case 2:
+        print('Celcius to Kelvin')
+        cck=float(input('Enter temperature in Celcius: '))
+        kck = cck+273.15
+        print("Temperature in Kelvin: ", kck)
+    case 3:
+        print('Fahrenheit to Celcius')
+        ffc = float(input("Enter temperature in Farenheit : "))  
+        cfc = ((ffc-32)*5)/9
+        print("Temperature in Celcius: ",cfc)
+    case 4:
+        print('Fahrenheit to Kelvin')
+        ffk = float(input("Enter temperature in Farenheit : "))
+        kfk = (((ffk - 32) * 5 )/ 9 )+ 273.15
+        print("Temperature in Kelvin: ", kfk)
+    case 5:
+        print('Kelvin to Celcius')
+        kkc=float(input('Enter temperature in Kelvin: '))
+        ckc = kkc-273.15
+        print("Temperature in Celcius: ", ckc)
+    case 6:
+        print('Kelvin to Fahrenheit')
+        kkf=float(input('Enter temperature in Kelvin: '))
+        fkf = (((kkf - 273.15) * 9 )/ 5) + 32
+        print("Temperature in Fahrenheit: ", fkf)
+    case _: print('Error')
+        
