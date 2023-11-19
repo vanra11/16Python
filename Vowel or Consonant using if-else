@@ -1,0 +1,9 @@
+string = input("Enter a String : ")
+v = 0
+c = 0
+for i in string:
+    if i in ('a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U'):
+        v+=1
+    elif i.isalpha():
+        c+=1
+print("Vowels :",v,"Consonants:",c)
