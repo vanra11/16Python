@@ -4,12 +4,12 @@ def findRoots(a, b, c):  #ax^2 + bx + c
     f = b * b - 4 * a * c  
     sv = math.sqrt(abs(f))
     if f > 0:  
-        print(" real and different roots ")  
+        print(" Real and dissimilar roots ")  
         print((-b + sv) / (2 * a))  
         print((-b - sv) / (2 * a))  
   
     elif f == 0:  
-        print(" real and same roots")  
+        print(" Real and Equal roots")  
         print(-b / (2 * a))
     else:  
         print("Complex Roots")  
@@ -17,9 +17,10 @@ def findRoots(a, b, c):  #ax^2 + bx + c
         print(- b / (2 * a), " - i", sv)  
   
   
-a = int(input('Enter a:'))  
-b = int(input('Enter b:'))  
-c = int(input('Enter c:'))
+a = int(input('Enter co-effiecient of x^2:'))  
+b = int(input('Enter co-effiecient of x:'))  
+c = int(input('Enter constant:'))
+print('Final Equation: ',a,'x^2+',b,'x+',c)
 if a == 0:  
     print("Input correct quadratic equation")  
 else:  
