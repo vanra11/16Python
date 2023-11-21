@@ -1,0 +1,14 @@
+num=int(input('Enter the number: '))
+l = str(num)                        #storing the entered number as a string
+length=len(l)                       #len() function calculates length of a string
+rem = sum = 0;    
+n = num;   
+while(num > 0):    
+    rem = num%10;    
+    sum = sum + int(rem**length);  #formula for disarium number  
+    num = num//10;    
+    length-=1;
+if(sum == n):    
+    print(str(n) + " is a disarium number");    
+else:    
+    print(str(n) + " is not a disarium number");    
