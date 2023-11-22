@@ -1,0 +1,8 @@
+lst = []
+l = int(input("Enter limit: "))
+print('Enter elements: ')
+for i in range(0, l-1):
+    n = int(input())
+    lst.append(n)  
+ 
+print(lst)
