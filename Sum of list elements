@@ -1,0 +1,12 @@
+sum = 0; 
+lst = []
+ 
+n = int(input("Enter number of elements : "))
+print('Enter elements: ')
+for i in range(0, n):
+    ele = int(input())
+    lst.append(ele)
+print(lst)
+for i in range(0, n):    
+   sum = sum + lst[i];    
+print("Sum of all the elements of an array: ", str(sum))
