@@ -1,0 +1,10 @@
+line=input('Enter the sentence: ')
+lower=0
+upper=0
+for word in line:
+    if (word>='a'and word<='z'):
+        lower+=1               
+    if (word>='A'and word<='Z'):
+        upper+=1
+print('Lower case characters: ',lower)
+print('Upper case characters: ',upper)
