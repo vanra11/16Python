@@ -1,0 +1,11 @@
+class Solution:
+    def revStr (ob, S): 
+        reversed=S[::-1]
+        return reversed
+if __name__ == '__main__': 
+    t = int (input ())
+    for _ in range (t):
+        S = input()
+        
+        ob = Solution()
+        print(ob.revStr(S))
