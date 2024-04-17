@@ -1,0 +1,22 @@
+class Solution:
+
+    def firstRepChar(self, s):
+        l = []
+        for i in s:
+            if i not in l:
+                l.append(i)
+            else:
+                return i
+                
+        return -1
+
+if __name__ == '__main__':
+
+    t = int(input())
+
+    for _ in range(t):
+        s = input()
+
+        solObj = Solution()
+
+        print(solObj.firstRepChar(s))
