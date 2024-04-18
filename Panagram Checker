@@ -1,0 +1,34 @@
+class Panagram:
+
+    def checkPangram(self,s):
+        alphabet=set('abcdefghijklmnopqrstuvwxyz')
+        letters=set()
+        for char in s:
+            if char.isalpha():
+                char=char.lower()
+                letters.add(char)
+        return len(letters)==26
+
+import atexit
+import io
+import sys
+
+_INPUT_LINES = sys.stdin.read().splitlines()
+input = iter(INPUT_LINES).next_
+_OUTPUT_BUFFER = io.StringIO()
+sys.stdout = _OUTPUT_BUFFER
+
+@atexit.register
+
+def write():
+    sys._stdout_.write(_OUTPUT_BUFFER.getvalue())
+
+if _name=='main_':
+    t = int(input())
+    for i in range(t):
+        s=str(input())
+        obj = Solution()
+        if(obj.checkPangram(s)):
+            print(1)
+        else:
+            print(0)
