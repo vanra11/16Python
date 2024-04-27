@@ -1,0 +1,30 @@
+class Solution:
+
+    def celebrity(self, M, n):
+        potential_celebrity=0
+        for i in range(1, n):
+            if M[potential_celebrity][i] == 1:
+                potential_celebrity = i
+
+        for i in range(n):
+            if i != potential_celebrity and (M[potential_celebrity][i] == 1 or M[i][potential_celebrity] == 0):
+                return -1
+        
+
+        return potential_celebrity
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t) :
+        n = int(input())
+        a = list(map(int,input().strip().split()))
+        k = 0
+        m = []
+        for i in range(n):
+            row = []
+            for j in range(n):
+                row.append(a[k])
+                k+=1
+            m.append(row)
+        ob = Solution()
+        print(ob.celebrity(m,n))
