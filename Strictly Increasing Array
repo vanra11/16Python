@@ -1,0 +1,14 @@
+from bisect import bisect_right
+        n = len(nums)
+        lis = [nums[0]]
+        for i in range(1, n):
+            num = nums[i] - i
+            pos = bisect_right(lis, num)
+            if pos == len(lis):
+                lis.append(num)
+            else:
+                lis[pos] = num
+        # We need to change all the numbers except
+        # the once from our "nums[i] - i" modified
+        # Longest Increasing Subsequence
+        return n - len(lis)
