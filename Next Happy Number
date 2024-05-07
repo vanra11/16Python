@@ -1,0 +1,19 @@
+def is_happy(n):
+    seen = set()
+    while n != 1:
+        n = sum(int(digit)**2 for digit in str(n))
+        if n in seen:
+            return False
+        seen.add(n)
+    return True
+
+def next_happy_number(N):
+    while True:
+        N += 1
+        if is_happy(N):
+            return N
+
+user_input = int(input("Enter a non-negative integer: "))
+
+result = next_happy_number(user_input)
+print("Next happy number after", user_input, "is", result)
