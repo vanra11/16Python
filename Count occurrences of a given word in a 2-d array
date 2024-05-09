@@ -1,0 +1,34 @@
+class Solution:
+    def findOccurrence(self,mat,target):
+        m=len(target)
+        h=len(mat)
+        w=len(mat[0])
+        ans=0
+        def bt(cur=(0,0,),idx=0,seen=(None,)):
+            nonlocal ans,mat,target,m,h,w
+            x,y=cur
+            if mat[y][x]==target[idx]:
+                if idx==m-1:
+                    ans+=1
+                else:
+                    for nx,ny in ((x-1,y),(x+1,y),(x,y-1),(x,y+1),):
+                        if 0<=nx<w and 0<=ny<h and (nx,ny,) not in seen:
+                            nxt=(nx,ny,)
+                            bt(nxt,idx+1,seen+(cur,))
+        for y in range(h):
+            for x in range(w):
+                bt((x,y,))
+        return ans
+
+if __name__ == "__main__":
+    t=int(input())
+    for _ in range(t):
+        line=input().strip().split()
+        R=int(line[0])
+        C=int(line[1])
+        mat=[]
+        for _ in range(R):
+            mat.append( [x for x in input().strip().split()] )
+        target=input()
+        obj = Solution()
+        print(obj.findOccurrence(mat,target))
