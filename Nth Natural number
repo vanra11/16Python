@@ -1,0 +1,13 @@
+def Nthnum(N):
+    count = 0
+    num = 0
+    
+    while count < N:
+        num += 1
+        if '9' not in str(num):
+            count += 1
+            
+    return num
+
+N = int(input("Enter the value of N: "))
+print("The Nth natural number after removing numbers containing digit 9 is:", Nthnum(N))
