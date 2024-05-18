@@ -1,0 +1,33 @@
+class Solution:
+    def trappingWater(self, arr,n):
+        if not arr: return 0
+
+        l,r = 0,n-1
+        leftmax,rightmax = arr[l],arr[r]
+        res = 0
+
+        while l < r:
+            if leftmax < rightmax:
+                l += 1
+                leftmax = max(leftmax,arr[l])
+                res += leftmax-arr[l]
+            else:
+                r -= 1
+                rightmax = max(rightmax,arr[r])
+                res += rightmax-arr[r]
+        return res
+
+import math
+
+def main():
+        T=int(input())
+        while(T>0):
+            
+            n=int(input())
+            
+            arr=[int(x) for x in input().strip().split()]
+            obj = Solution()
+            print(obj.trappingWater(arr,n))
+            T-=1
+if __name__ == "__main__":
+    main()
