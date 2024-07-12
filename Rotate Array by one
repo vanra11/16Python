@@ -1,0 +1,15 @@
+class Solution:
+    def rotate(self, arr):
+        n = arr.pop()
+        arr.insert(0,n)
+        return arr
+
+
+if __name__ == "__main__":
+    t = int(input())
+    while t > 0:
+        arr = list(map(int, input().split()))
+        ob = Solution()
+        ob.rotate(arr)
+        print(" ".join(map(str, arr)))
+        t -= 1
